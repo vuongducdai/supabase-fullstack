@@ -61,3 +61,24 @@ USING (auth.uid()=user_id)
 WITH CHECK (auth.uid()=user_id);
 ```
 
+## Running Migrations
+
+When you run `supabase stop` and `supabase start`, migrations don't run automatically. To apply migrations:
+
+```bash
+# Reset database and apply all migrations
+npx supabase db reset
+
+# Or apply pending migrations only
+npx supabase migration up
+```
+
+> **Note:** `supabase stop/start` preserves database state. Use `db reset` or `migration up` to run your SQL migrations.
+
+## Generate database type for frontend
+
+```bash
+npx supabase gen types typescript --local > ./src/database.types.ts
+```
+
+
