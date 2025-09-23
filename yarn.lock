@@ -617,7 +617,7 @@
     react "^18.2.0"
     react-dom "^18.2.0"
 
-"@supabase/auth-ui-shared@0.1.8":
+"@supabase/auth-ui-shared@0.1.8", "@supabase/auth-ui-shared@^0.1.8":
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/@supabase/auth-ui-shared/-/auth-ui-shared-0.1.8.tgz#1ce63c4ac58f29d7c76436b774b0e8809dd08617"
   integrity sha512-ouQ0DjKcEFg+0gZigFIEgu01V3e6riGZPzgVD0MJsCBNsMsiDT74+GgCEIElMUpTGkwSja3xLwdFRFgMNFKcjg==
