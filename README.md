@@ -22,3 +22,16 @@ const supabaseKey = (import.meta as any).env.VITE_SUPABASE_ANON_KEY; // Safe for
 export const supaClient = createClient(supabaseUrl, supabaseKey);
 ```
 
+## Database Tables
+
+We need to create table in starting ddl as we dont want our tables to disappeared for every time we start and stop supabase local.
+
+```sql
+create table user_profiles (
+  user_id uuid primary key references auth.users (id) not null,
+  username text unique not null
+  CONSTRAINT proper_username CHECK (username ~* '^[a-zA-Z0-9_]+$')
+  CONSTRAINT username_length CHECK (char_length(username) > 3 and char_length(username) < 15)
+);
+```
+
